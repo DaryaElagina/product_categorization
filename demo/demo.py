@@ -12,7 +12,6 @@ product_name = input()
 
 print('Вы ввели: ', product_name)
 
-
 df_new = pd.DataFrame([[product_name]], columns=['title'])
 data_to_predict = category_vectorizer.transform(df_new['title'].fillna(''))
 predictions = category_model.predict(data_to_predict)
